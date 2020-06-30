@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp" ng-init="cost=50">
+<html ng-app="myApp" ng-init="total=0">
 <meta charset="utf-8">
 <title>Best Shop in the World</title>
 
@@ -40,9 +40,9 @@
         <div class="showCart">
             <ul>
                 <li ng-repeat="c in cart">
-                    <h3>Product: {{product}}</h3>
-                    <h3>Quantity: {{posotita}}</h3>
-
+                    <h3>Product: {{c.name}}</h3>
+                    <h3>Quantity: {{c.posotita}}</h3>
+                    <button ng-click="removeCart(c.posotita, c.timi)">Remove from cart</button>
                 </li>
             </ul>
 
