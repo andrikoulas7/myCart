@@ -12,8 +12,10 @@ app.controller('productsController', ['$scope', function ($scope) {
 
     $scope.addtoCart = function (price, name, quantity) {
         $scope.cart.push({
-            name: name, 
-            posotita: quantity});
+            name: name,
+            posotita: quantity,
+            timi: price
+        });
         //console.dir(name);
         console.dir($scope.cart);
         $scope.total += (price * quantity);
@@ -21,8 +23,11 @@ app.controller('productsController', ['$scope', function ($scope) {
         $scope.product = name;
     }
 
-    $scope.removeCart = function(){
-        
+    $scope.removeCart = function (posotita, timi) {
+        var index = $scope.cart.indexOf(posotita);
+        console.log(index);
+        $scope.cart.splice(index, 1);
+        $scope.total -= timi;
     }
 
 }])
