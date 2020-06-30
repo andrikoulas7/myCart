@@ -27,7 +27,7 @@ app.controller('productsController', ['$scope', function ($scope) {
         var index = $scope.cart.indexOf(posotita);
         console.log(index);
         $scope.cart.splice(index, 1);
-        $scope.total -= timi;
+        $scope.total -= (timi*posotita);
     }
 
 }])
