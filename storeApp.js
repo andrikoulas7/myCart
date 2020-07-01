@@ -1,5 +1,5 @@
 var app = angular.module('myApp', []);
-app.controller('productsController', ['$scope', function ($scope, filterFilter) {
+app.controller('productsController', ['$scope', function ($scope) {
     $scope.products = [
         { id: 1, name: "Oranges", price: 3000 },
         { id: 2, name: "Apples", price: 4000 },
@@ -14,7 +14,7 @@ app.controller('productsController', ['$scope', function ($scope, filterFilter) 
         $scope.cart.push({
             name: name, 
             posotita: quantity});
-        console.dir(name);
+        //console.dir(name);
         console.dir($scope.cart);
         $scope.total += (price * quantity);
         $scope.posotita = quantity;
