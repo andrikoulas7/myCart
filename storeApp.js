@@ -11,11 +11,18 @@ app.controller('productsController', ['$scope', function ($scope, filterFilter) 
     $scope.total = 0;
 
     $scope.addtoCart = function (price, name, quantity) {
-        $scope.cart.push(name);
+        $scope.cart.push({
+            name: name, 
+            posotita: quantity});
         console.dir(name);
         console.dir($scope.cart);
         $scope.total += (price * quantity);
         $scope.posotita = quantity;
         $scope.product = name;
     }
+
+    $scope.removeCart = function(){
+        
+    }
+
 }])
