@@ -1,4 +1,10 @@
-.qty{
+.qtyNum{
     width: 50px;
 
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
