@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="myApp" ng-init="cost=50">
 <meta charset="utf-8">
 <title>Best Shop in the World</title>
 
@@ -20,18 +20,33 @@
 
 <body>
     <h2>Best Store</h2>
+    <hr>
+    <hr>
     <div class="maindiv" ng-controller="productsController">
         <ul>
-            <li ng-repeat="product in products">
+            <li ng-repeat="product in products" ng-model="productsList">
                 <h3>{{product.name}}</h3>
                 {{product.price | currency}}
-                <input type="number" class="qty" min=0 ng-model="product.qty">
-                <button ng-click="addtoCart(product.qty)">Add to Cart</button>
+                <input type="number" class="qtyNum" min=1 max=10 ng-model="qty"><br>
+                <button ng-click="addtoCart(product.price, product.name, qty)">Add to Cart</button>
+                <hr>
+                
             </li>
         </ul>
         <p>
-            {{cost}}
+        <h2>Your cart: {{total | currency}}</h2>
         </p>
+
+        <div class="showCart">
+            <ul>
+                <li ng-repeat="c in cart">
+                    <h3>Product: {{product}}</h3>
+                    <h3>Quantity: {{posotita}}</h3>
+
+                </li>
+            </ul>
+
+        </div>
     </div>
 </body>
 
