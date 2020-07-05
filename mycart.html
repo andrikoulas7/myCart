@@ -23,16 +23,19 @@
     <hr>
     <hr>
     <div class="maindiv" ng-controller="productsController">
+        <input type="text" ng-model="searchText" placeholder="Search a fruit">
+
         <ul>
-            <li ng-repeat="product in products" ng-model="productsList">
+            <li ng-repeat="product in products | filter:searchText" ng-model="productsList">
                 <h3>{{product.name}}</h3>
                 {{product.price | currency}}
                 <input type="number" class="qtyNum" min=1 max=10 ng-model="qty"><br>
                 <button ng-click="addtoCart(product.price, product.name, qty)">Add to Cart</button>
                 <hr>
-                
+
             </li>
         </ul>
+
         <p>
         <h2>Your cart: {{total | currency}}</h2>
         </p>
@@ -42,12 +45,13 @@
                 <li ng-repeat="c in cart">
                     <h3>Product: {{c.name}}</h3>
                     <h3>Quantity: {{c.posotita}}</h3>
-                    <button ng-click="removeCart(c.posotita, c.timi)">Remove from cart</button>
+                    <button ng-click="removeCart($index, c.timi, c.posotita)">Remove from cart</button>
                 </li>
             </ul>
 
         </div>
     </div>
+
 </body>
 
 </html>
