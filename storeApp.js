@@ -33,6 +33,9 @@ app.controller('productsController', ['$scope', function ($scope) {
     }
 
     //remove products from your cart
+
+////add a clear cart btn to remove all items from cart
+
     $scope.removeCart = function (index, timi, posotita) {
         //var index = $scope.cart.indexOf(posotita);
         $scope.cart.splice(index, 1);
