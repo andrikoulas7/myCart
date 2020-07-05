@@ -8,10 +8,6 @@ h2{
 h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.rightdiv{
-    position: relative;
-    left: 100px;
-}
 body{
     color: #3e3333;
     font-family: fantasy;
@@ -20,4 +16,12 @@ body{
 .showCart{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+img{
+    width: 50px;
+}
+.sticky{
+    position: sticky;
+    top: 0px;
+    background-color: coral;
 }

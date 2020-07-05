@@ -19,16 +19,17 @@
 </head>
 
 <body>
-    <h2>Best Store</h2>
+    <h2 class="sticky">Best Store</h2>
     <hr>
     <hr>
     <div class="maindiv" ng-controller="productsController">
-        <input type="text" ng-model="searchText" placeholder="Search a fruit">
+        <input type="text" ng-model="searchText" placeholder="Search a fruit or category">
 
-        <ul>
+        <ul class="productsList">
             <li ng-repeat="product in products | filter:searchText" ng-model="productsList">
                 <h3>{{product.name}}</h3>
                 {{product.price | currency}}
+                <img src="{{product.image}}">
                 <input type="number" class="qtyNum" min=1 max=10 ng-model="qty"><br>
                 <button ng-click="addtoCart(product.price, product.name, qty)">Add to Cart</button>
                 <hr>
