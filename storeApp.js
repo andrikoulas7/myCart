@@ -1,10 +1,10 @@
 var app = angular.module('myApp', []);
 app.controller('productsController', ['$scope', function ($scope) {
     $scope.products = [
-        { id: 1, name: "Oranges", price: 3000 },
-        { id: 2, name: "Apples", price: 4000 },
-        { id: 3, name: "Tomatoes", price: 5000 },
-        { id: 4, name: "Bananas", price: 6000 }
+        { id: 1, name: "Oranges", price: 300 },
+        { id: 2, name: "Apples", price: 400 },
+        { id: 3, name: "Tomatoes", price: 500 },
+        { id: 4, name: "Bananas", price: 600 }
     ];
 
     $scope.cart = [];
@@ -23,11 +23,11 @@ app.controller('productsController', ['$scope', function ($scope) {
         $scope.product = name;
     }
 
-    $scope.removeCart = function (posotita, timi) {
-        var index = $scope.cart.indexOf(posotita);
-        console.log(index);
+    $scope.removeCart = function (index, timi, posotita) {
+        //var index = $scope.cart.indexOf(posotita);
         $scope.cart.splice(index, 1);
         $scope.total -= (timi*posotita);
+        console.log(index);
     }
 
 }])
