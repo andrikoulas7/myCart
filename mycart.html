@@ -41,14 +41,14 @@
 
         <div class="showCart">
             <p>
-            <h2>Your cart: {{total | currency}}</h2>
+            <h2>Your cart: {{total | currency}}</h2><br>
+            <button ng-click="clearCart()">Clear Cart</button>
             </p>
             <ul>
                 <li ng-repeat="c in cart">
                     <h3>Product: {{c.name}}</h3>
                     <h3>Quantity: {{c.posotita}}</h3>
                     <button ng-click="removeCart($index, c.timi, c.posotita)">Remove from cart</button>
-                    <button ng-click="clearCart()">Clear Cart</button>
 
                 </li>
             </ul>
