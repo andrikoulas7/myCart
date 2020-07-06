@@ -33,14 +33,26 @@ app.controller('productsController', ['$scope', function ($scope) {
     }
 
     //remove products from your cart
-
-////add a clear cart btn to remove all items from cart
-
     $scope.removeCart = function (index, timi, posotita) {
         //var index = $scope.cart.indexOf(posotita);
         $scope.cart.splice(index, 1);
-        $scope.total -= (timi * posotita);
+        if ($scope.total != 0) {
+            $scope.total -= (timi * posotita);
+        } else {
+            $scope.total = 0;
+        }
         console.log(index);
+        console.dir($scope.cart);
+
+    }
+
+    $scope.clearCart = function (onoma, posotita, timi) {
+        $scope.total = 0;
+        $scope.name = "";
+        $scope.posotita = 0;
+        $scope.timi = 0;
+        console.dir($scope.cart);
+
     }
 
 }])
