@@ -37,26 +37,22 @@
                 {{product.price | currency}}
                 <img src="{{product.image}}">
                 <input type="number" id="qtyNum" value="1" min=1 max=10 ng-model="qty"><br>
-                <button ng-click="addtoCart(product.price, product.name, qty)">Add to Cart</button>
+                <button class="btn btn-primary" ng-click="addtoCart(product.price, product.name, qty)">Add to Cart</button>
                 <hr>
 
             </li>
         </ul>
 
-        <div class="alert alert-primary">
-            <strong>Success!</strong>
-        </div>
-
         <div class="showCart">
             <p>
             <h2>Your cart: {{total | currency}}</h2><br>
-            <button ng-click="clearCart()">Clear Cart</button>
+            <button class="btn btn-primary" ng-click="clearCart()">Clear Cart</button>
             </p>
             <ul>
                 <li ng-repeat="c in cart">
-                    <h3>Product: {{c.name}}</h3>
-                    <h3>Quantity: {{c.posotita}}</h3>
-                    <button ng-click="removeCart($index, c.timi, c.posotita)">Remove from cart</button>
+                    <h3><span class="badge badge-pill badge-danger">Product: </span> {{c.name}}</h3>
+                    <h3><span class="badge badge-pill badge-success">Quantity: </span> {{c.posotita}}</h3>
+                    <button class="btn btn-primary" ng-click="removeCart($index, c.timi, c.posotita)">Remove from cart</button>
 
                 </li>
             </ul>
