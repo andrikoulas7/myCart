@@ -7,6 +7,10 @@ h2{
 h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+h1{
+    text-align: center;
+    position: sticky;
+}
 body{
     color: #3e3333;
     font-family: fantasy;
@@ -17,9 +21,9 @@ body{
 img{
     width: 50px;
 }
-.sticky{
+/*.sticky{
     position: sticky;
     top: 0px;
     background-color: coral;
     text-align: center;
-}
+}*/
