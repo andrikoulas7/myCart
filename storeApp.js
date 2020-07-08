@@ -37,7 +37,7 @@ app.controller('productsController', ['$scope', function ($scope) {
         $scope.total += (price * quantity);
         $scope.posotita = quantity;
         $scope.product = name;
-        console.log("Posotita: ",quantity);
+        console.log("Posotita: ", quantity);
     }
 
     //remove products from your cart
@@ -60,11 +60,6 @@ app.controller('productsController', ['$scope', function ($scope) {
         var len = $scope.cart.length;
         console.log(len);
         $scope.cart.splice(0, len);
-        //$scope.cart.push({
-        //    name: "",
-        //    posotita: 0,
-        //    timi: 0
-        //})
         console.dir($scope.cart);
         console.log($scope.cart);
 
