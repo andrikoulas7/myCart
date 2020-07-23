@@ -15,6 +15,9 @@ body{
 }
 .showCart{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: sticky;
+    bottom: 10px;
+    background-color: darkolivegreen;
 
 }
 img{
@@ -24,4 +27,5 @@ img{
     position: sticky;
     top: 0px;
     background-color: coral;
-}
+    text-align: center;
+}   
