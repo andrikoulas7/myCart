@@ -1,6 +1,5 @@
-.qtyNum{
+#qtyNum{
     width: 50px;
-
 }
 h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,24 +7,34 @@ h2{
 h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+h1{
+    text-align: center;
+    position: sticky;
+}
 body{
     color: #3e3333;
     font-family: fantasy;
-
 }
 .showCart{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+<<<<<<< HEAD
     position: sticky;
     bottom: 10px;
     background-color: darkolivegreen;
 
+=======
+>>>>>>> 17ce80f300d2745de6d61dcb0c789edf49858a1e
 }
 img{
     width: 50px;
 }
-.sticky{
+/*.sticky{
     position: sticky;
     top: 0px;
     background-color: coral;
     text-align: center;
+<<<<<<< HEAD
 }   
+=======
+}*/
+>>>>>>> 17ce80f300d2745de6d61dcb0c789edf49858a1e
