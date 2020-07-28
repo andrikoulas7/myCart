@@ -29,9 +29,47 @@
         <h1>Best Store</h1>
         <hr>
         <hr>
+        <div class="grid-container" ng-controller="productsController">
+            <input type="text" ng-model="searchText" placeholder="Search a fruit or category">
+    
+            <ul class="productsList">
+                <li ng-repeat="product in products | filter:searchText" ng-model="productsList">
+                    <h3>{{product.name}}</h3>
+                    {{product.price | currency}}
+                    <img src="{{product.image}}">
+                    <input type="number" id="qtyNum" value="1" min=1 max=10 ng-model="qty"><br>
+                    <button class="btn btn-primary" ng-click="addtoCart(product.price, product.name, qty)">Add to
+                        Cart</button>
+                    <hr>
+    
+                </li>
+            </ul>
+    
+            <div class="grid-item">
+                <p class="font-weight-bolder">
+                    Your cart: {{total | currency}}<br>
+                    <button class="btn btn-primary" ng-click="clearCart()">Clear Cart</button>
+                </p>
+                <ul>
+                    <li ng-repeat="c in cart">
+                        <p class="font-weight-light">
+                            <span class="badge badge-pill badge-danger">Product: </span> {{c.name}}
+                        </p>
+                        <p class="font-weight-normal">
+                            <span class="badge badge-pill badge-success">Quantity: </span> {{c.posotita}}
+                        </p>
+                        <button class="btn btn-primary" ng-click="removeCart($index, c.timi, c.posotita)">Remove from
+                            cart</button>
+    
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
+    
     </div>
 
-    <div class="container-fluid" ng-controller="productsController">
+    <!--<div class="container-fluid" ng-controller="productsController">
         <input type="text" ng-model="searchText" placeholder="Search a fruit or category">
 
         <ul class="productsList">
@@ -67,7 +105,7 @@
             </ul>
 
         </div>
-    </div>
+    </div>-->
 
 </body>
 

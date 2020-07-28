@@ -17,24 +17,35 @@ body{
 }
 .showCart{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-<<<<<<< HEAD
     position: sticky;
     bottom: 10px;
     background-color: darkolivegreen;
 
-=======
->>>>>>> 17ce80f300d2745de6d61dcb0c789edf49858a1e
 }
+
 img{
     width: 50px;
 }
+
+.grid-container > div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
 /*.sticky{
     position: sticky;
     top: 0px;
     background-color: coral;
     text-align: center;
-<<<<<<< HEAD
 }   
-=======
-}*/
->>>>>>> 17ce80f300d2745de6d61dcb0c789edf49858a1e
