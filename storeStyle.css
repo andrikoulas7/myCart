@@ -17,15 +17,32 @@ body{
 }
 .showCart{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: sticky;
+    bottom: 10px;
+    background-color: darkolivegreen;
+
 }
+
 img{
     width: 50px;
 }
-/*.sticky{
-    position: sticky;
-    top: 0px;
-    background-color: coral;
+
+.grid-container > div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
     text-align: center;
+<<<<<<< HEAD:storeStyle.css
 }*/
 
 .shop-items{
@@ -44,3 +61,6 @@ ul {
     display: flex;
     flex-wrap: wrap;
 }
+=======
+  }
+>>>>>>> 9a4bbcbe8803f5cf7a3ef338c67b02ea5c8bc688:mycartstyle.css
