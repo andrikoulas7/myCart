@@ -1,0 +1,46 @@
+#qtyNum{
+    width: 50px;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    text-align: center;
+    position: sticky;
+}
+body{
+    color: #3e3333;
+    font-family: fantasy;
+}
+.showCart{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+    width: 50px;
+}
+/*.sticky{
+    position: sticky;
+    top: 0px;
+    background-color: coral;
+    text-align: center;
+}*/
+
+.shop-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shop-item-details{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
