@@ -1,17 +1,17 @@
 var app = angular.module('myApp', []);
 app.controller('productsController', ['$scope', function ($scope) {
     $scope.products = [
-        { name: "Oranges", category: "Citrus", price: 30, image: "./images/oranges.jpg" },
-        { name: "Grapefruits", category: "Citrus", price: 30, image: "./images/grapefruit.jpg" },
-        { name: "Mandarins", category: "Citrus", price: 18, image: "./images/mandarin.jpg" },
-        { name: "Limes", category: "Citrus", price: 25, image: "./images/lime.jpg" },
-        { name: "Nectarines", category: "Stone fruit", price: 24, image: "./images/nectarin.jpg" },
-        { name: "Apricots", category: "Stone fruit", price: 25, image: "./images/apricot.jpg" },
-        { name: "Peach", category: "Stone fruit", price: 35, image: "./images/peach.jpg" },
-        { name: "Bananas", category: "Tropical", price: 10, image: "./images/bananas.jpg" },
-        { name: "Mangoes", category: "Tropical", price: 21, image: "./images/mangos.jpg" },
-        { name: "Strawberries", category: "Berries", price: 16, image: "./images/strawberries.jpg" },
-        { name: "Blueberries", category: "Berries", price: 14, image: "./images/blueberries.jpg" },
+        { name: "Oranges", category: "Citrus", price: 2.5, image: "./images/oranges.jpg" },
+        { name: "Grapefruits", category: "Citrus", price: 3.0, image: "./images/grapefruit.jpg" },
+        { name: "Mandarins", category: "Citrus", price: 1.8, image: "./images/mandarin.jpg" },
+        { name: "Limes", category: "Citrus", price: 2.5, image: "./images/lime.jpg" },
+        { name: "Nectarines", category: "Stone fruit", price: 2.4, image: "./images/nectarin.jpg" },
+        { name: "Apricots", category: "Stone fruit", price: 1.3, image: "./images/apricot.jpg" },
+        { name: "Peach", category: "Stone fruit", price: 3.5, image: "./images/peach.jpg" },
+        { name: "Bananas", category: "Tropical", price: 1.2, image: "./images/bananas.jpg" },
+        { name: "Mangoes", category: "Tropical", price: 2.1, image: "./images/mangos.jpg" },
+        { name: "Strawberries", category: "Berries", price: 1.6, image: "./images/strawberries.jpg" },
+        { name: "Blueberries", category: "Berries", price: 1.4, image: "./images/blueberries.jpg" },
 
     ];
 
@@ -24,7 +24,7 @@ app.controller('productsController', ['$scope', function ($scope) {
             $scope.cart.push({
                 name: name,
                 posotita: 1,
-                timi: price
+                timi: price,
             })
         } else {
             $scope.cart.push({
@@ -41,7 +41,7 @@ app.controller('productsController', ['$scope', function ($scope) {
     }
 
     //remove products from your cart
-    $scope.removeCart = function (index, timi, posotita) {
+    $scope.removeCartItem = function (index, timi, posotita) {
         //var index = $scope.cart.indexOf(posotita);
         $scope.cart.splice(index, 1);
         if ($scope.total != 0) {

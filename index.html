@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-init="total=0">
 <meta charset="utf-8">
-<title>Best Shop in the World</title>
+<title>BEST STORE</title>
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" data-require="angularjs@1.4"
@@ -20,36 +20,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <script src="StoreApp.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="mycartstyle.css" />
+    <link rel="stylesheet" href="storeStyle.css" />
 
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid">
-        <h1>Best Store</h1>
-        <hr>
-        <hr>
+        <h1>BEST STORE</h1>
     </div>
 
     <div class="container-fluid" ng-controller="productsController">
         <input type="text" ng-model="searchText" placeholder="Search a fruit or category">
 
-        <ul class="productsList">
-            <li ng-repeat="product in products | filter:searchText" ng-model="productsList">
-                <h3>{{product.name}}</h3>
-                {{product.price | currency}}
-                <img src="{{product.image}}">
-                <input type="number" id="qtyNum" value="1" min=1 max=10 ng-model="qty"><br>
-                <button class="btn btn-primary" ng-click="addtoCart(product.price, product.name, qty)">Add to
-                    Cart</button>
-                <hr>
+        <div class="shop-items">
+            <ul class="productsList">
+                <li ng-repeat="product in products | filter:searchText" ng-model="productsList">
+                    <div class="shop-item-details">
+                        <h3>{{product.name}}</h3>
+                        {{product.price | currency:'€'}}
+                    </div>
+                    <img src="{{product.image}}">
+                    <input type="number" id="qtyNum" value="1" min=1 max=10 ng-model="qty"><br>
+                    <button class="btn btn-primary" ng-click="addtoCart(product.price, product.name, qty)">Add to
+                        Cart</button>
+                    <hr>
 
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
 
         <div class="showCart">
             <p class="font-weight-bolder">
-                Your cart: {{total | currency}}<br>
+                Your cart: {{total | currency:'€'}}<br>
                 <button class="btn btn-primary" ng-click="clearCart()">Clear Cart</button>
             </p>
             <ul>
@@ -60,7 +62,7 @@
                     <p class="font-weight-normal">
                         <span class="badge badge-pill badge-success">Quantity: </span> {{c.posotita}}
                     </p>
-                    <button class="btn btn-primary" ng-click="removeCart($index, c.timi, c.posotita)">Remove from
+                    <button class="btn btn-primary" ng-click="removeCartItem($index, c.timi, c.posotita)">Remove from
                         cart</button>
 
                 </li>
